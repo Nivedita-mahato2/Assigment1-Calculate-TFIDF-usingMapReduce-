@@ -50,7 +50,7 @@ for word in corpus_word_count_dict.keys():
           inverse_doc_freq = NUM_DOCUMENTS / corpus_word_count_dict[word]
           tf_idf = term_frequency * inverse_doc_freq
           print_key = word + "," + word_stats[DOC_NAME_IDX]
-          print "%s\t%s" % (print_key, tf_idf)
+          print "{},{}".format(print_key, tf_idf)
         except ZeroDivisionError as ex:
           print word_stats[WORDS_IN_DOC_IDX]
           print "Error", ex
